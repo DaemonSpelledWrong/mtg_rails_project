@@ -1,5 +1,5 @@
 class RegistrationController < ApplicationController
-skip_before_action :authenticate_request
+  skip_before_action :authenticate_request
 
   def create
     salt = 'q34tf234'
