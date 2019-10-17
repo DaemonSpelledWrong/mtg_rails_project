@@ -49,8 +49,35 @@ table {
 	border-spacing: 0;
 }
 
-/* Styles */
+/* Main Styles */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-grow: 1;
+	color: white;
+	height: 8rem;
+	width: 95%;
+	margin: auto;
+}
+
+.title {
+	align-items: center;
+	justify-content: center;
+}
 
 body {
-  font-family: 'Open Sans', sans-serif;
+	background-image: url("gray-gradient-abstract-background-260nw-248997391.jpg");
+	background-size: cover;
+	font-family: 'Open Sans', sans-serif;
+	
+}
+
+/* More Styles */
+
+.filter-styles {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
