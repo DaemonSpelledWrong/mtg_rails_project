@@ -53,31 +53,82 @@ table {
 
 header {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	flex-grow: 1;
-	color: white;
+	background-image: url("navygradient.png");
+	color: black;
 	height: 8rem;
-	width: 95%;
-	margin: auto;
+	border-radius: 1rem;
+}
+
+.main-site-navigation {
+	background-color: #F9EA9A;
+	padding: 1rem;
+	border-radius: 1rem;
 }
 
 .title {
-	align-items: center;
-	justify-content: center;
+	background-color: #F9EA9A;
+	padding: 1rem;
+	border-radius: 1rem;
 }
 
 body {
-	background-image: url("gray-gradient-abstract-background-260nw-248997391.jpg");
+	background-image: url("lightbrowngradient.jpg");
 	background-size: cover;
 	font-family: 'Open Sans', sans-serif;
-	
 }
 
-/* More Styles */
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
-.filter-styles {
+/* Login & Sign up Styles */
+
+#login-submission {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+#signup-submission {
+	margin-bottom: 1rem;
+}
+
+/* Deck Zone */
+
+.deck-filter {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	flex-direction: column;
+	background-image: url("navygradient.png");
+	width: 900px;
+	border-radius: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
+
+.format-navigation {
+	background: yellowgreen;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+.recent-deck-zone {
+	color: white;
+	background-color: #F98948;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+/*
+#9B8816 Dark Yellow
+#F98948 Mango Tango
+#5D3A00 Seal Brown
+#684E32 Tuscan Brown
+#F9EA9A Flavescent
+*/

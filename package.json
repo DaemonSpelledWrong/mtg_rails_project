@@ -1,0 +1,23 @@
+{
+  "name": "mtg-deckbuilder",
+  "version": "1.0.0",
+  "description": "sign up and make decks for MTG",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaemonSpelledWrong/mtg_rails_project.git"
+  },
+  "author": "Damon Self",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaemonSpelledWrong/mtg_rails_project/issues"
+  },
+  "homepage": "https://github.com/DaemonSpelledWrong/mtg_rails_project#readme",
+  "dependencies": {
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  }
+}
