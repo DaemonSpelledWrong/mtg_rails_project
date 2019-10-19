@@ -13,29 +13,48 @@
         <h1>MTG Name</h1>
         <p>Dumb MTG slogan</p>
       </section>
-      <nav>
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Login</a>
-          <a href="">Sign Up</a>
-        </nav>
+      <section class="main-site-navigation">
+        <nav>
+          <a href="" id="home-button">Home</a>
+          <a href="" id="signup-button">Sign Up</a>
+          <a href="" id="login-button">Login</a>
+          <a href="" id="logout-button">Logout</a>
+      </nav>
+      </section>
     </header>
-    <form id="login-submission">
-      <label for="email">Email</label>
-      <input id="email" type="text" name="email">
+    <main>
+      <form id="login-submission">
+        <label for="login-email">Email</label>
+        <input id="login-email" type="text" placeholder="example@example.com"name="email">
 
-      <label for="password">Password</label>
-      <input id="password" type="text" name="password">
+        <label for="login-password">Password</label>
+        <input id="login-password" type="text" placeholder="password" name="password">
 
-      <input type="submit">
-    </form>
-    <section class="filter-nav">
-      <nav>
+        <input type="submit" value="Login">
+      </form>
+      <form id="signup-submission">
+        <label for="signup-email">Email</label>
+        <input id="signup-email" type="text" placeholder="example@example.com"name="email">
+
+        <label for="signup-password">Password</label>
+        <input id="signup-password" type="text" placeholder="password" name="password">
+
+        <label for="signup-password_confirmation">Password Confirmation</label>
+        <input id="signup-password_confirmation" type="text" placeholder="password_confirmation" name="password_confirmation">
+        
+        <input type="submit" value="Sign up">
+      </form>
+      <nav class="format-navigation">
         <a href="">Standard</a>
         <a href="">Modern</a>
         <a href="">Commander</a>
       </nav>
-    </section>
+      <section class="deck-filter">
+        <section class="recent-deck-zone">
+          <p>I am an example</p>
+        </section>
+      </section>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
