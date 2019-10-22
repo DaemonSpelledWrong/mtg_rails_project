@@ -6,8 +6,8 @@ export default class Navigation extends Component {
     return(
       <header>
         <section className="title">
-          <h1>MTG Name</h1>
-          <p>Dumb MTG slogan</p>
+          <img src="https://deckmaster.info/images/sets/PPR_R.png"></img>
+          <h1>Magic Deckbuilder Deluxe</h1>
         </section>
         <section className="main-site-navigation">
           <ul className="navbar">

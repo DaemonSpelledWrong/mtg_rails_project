@@ -50,26 +50,36 @@ table {
 
 header {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	flex-grow: 1;
   background-color: #303437;
-  color: #4F0000;
+  color: #C4AB63;
   height: 8rem;
-  border-style: solid;
-  border-width: 1.5px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-style: double;
+  border-width: 5px;
   border-color: grey;
 }
 
+.title img {
+  width: 100px;
+  height: 7rem;
+  margin-right: 2rem;
+}
+
 .title {
-	background-color:  #AE8B70;
-	padding: 1rem;
-	border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 45px;
 }
 
 .main-site-navigation {
-	background-color:  #AE8B70;
-	padding: 1rem;
+  padding: 1rem;
+  border-style: double;
+  border-width: 2px;
 	border-radius: 1rem;
 }
 
@@ -79,10 +89,11 @@ header {
 
 .navbar li {
   margin: 0 15px 0;
-  border: groove;
 }
 
 .navbar a {
   text-decoration: none;
-  color: #4F0000;
+  color: #C4AB63;
 }
+
+/* #4F0000 */
