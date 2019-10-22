@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+#form-submissions {
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  min-height: 100vh;
+	background-color: #D9CED6;
+	font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20rem;
+}
