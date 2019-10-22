@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './App.css'
 
 export default class Login extends Component {
   constructor(props){
@@ -7,6 +8,24 @@ export default class Login extends Component {
     email:'',
     password:''
     }
+  }
+  logUserIn = (event) => {
+    event.preventDefault();
+    fetch('http://localhost:3000/authenticate', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        email: this.state.email,
+        password: this.state.password
+      })
+    })
+    .then(response => response.json())
+    .then(token => {
+      localStorage.setItem('authToken', token.auth_token)
+    })
   }
   updateEmail = (event) => {
     this.setState({
@@ -19,7 +38,7 @@ export default class Login extends Component {
   }
   render() {
     return(
-      <form id='login-submission' onSubmit={this.handleSubmit(event)}>
+      <form id='form-submissions' onSubmit={event => this.logUserIn(event)}>
         <label htmlFor="login-email">Email</label>
         <input id="login-email" type="text" placeholder="example@example.com" name="email" 
         onChange={event => this.updateEmail(event)} value={this.state.email} />
