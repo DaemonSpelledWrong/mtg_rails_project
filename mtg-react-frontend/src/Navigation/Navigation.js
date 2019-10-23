@@ -6,7 +6,7 @@ export default class Navigation extends Component {
     return(
       <header>
         <section className="title">
-          <img src="https://deckmaster.info/images/sets/PPR_R.png"></img>
+          <img src="https://deckmaster.info/images/sets/PPR_R.png" alt="MTG Logo"></img>
           <h1>Magic Deckbuilder Deluxe</h1>
         </section>
         <section className="main-site-navigation">
