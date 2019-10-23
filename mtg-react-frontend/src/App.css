@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-#form-submissions {
-  display: flex;
-  justify-content: center;
-}
-
 .App {
   min-height: 100vh;
 	background-color: #D9CED6;
@@ -15,5 +10,33 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 20rem;
+}
+
+#line-break {
+  height: 1vh;
+  width: 99.35%;
+  background-color: #303437;
+  border-style: double;
+  border-width: 5px;
+  border-color: grey;;
+  border-radius: 6px;
+}
+
+#form-submissions {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+#form-submissions label {
+  margin:0 0 3px 0;
+	padding:0px;
+	display:block;
+	font-weight: bold;
+}
+
+#form-submissions input {
+  border-radius: 6px;
 }
