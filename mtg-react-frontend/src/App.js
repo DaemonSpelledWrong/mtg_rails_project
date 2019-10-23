@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Login from './Login';
-import Register from './Register';
+import Login from './Login/Login';
+import Register from './Register/Register';
 import Navigation from './Navigation/Navigation'
 import Footer from './Footer/Footer'
 
@@ -34,8 +34,9 @@ import Footer from './Footer/Footer'
       <div className="App">
         <Navigation />
         <main>
-        <Login />
-        <Register />
+          <Login />
+          <section id="line-break"></section>
+          {/* Recent Decks */}
         </main>
         <Footer />
       </div>
