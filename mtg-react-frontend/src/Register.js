@@ -49,11 +49,11 @@ export default class Register extends Component {
          onChange={event => this.updateEmail(event)} value={this.state.email}/>
 
         <label htmlFor="signup-password">Password</label>
-        <input id="signup-password" type="text" placeholder="password" name="password"
+        <input id="signup-password" type="password" placeholder="password" name="password"
         onChange={event => this.updatePassword(event)} value={this.state.password}/>
 
         <label htmlFor="signup-password_confirmation">Password Confirmation</label>
-        <input id="signup-password_confirmation" type="text" placeholder="password_confirmation" name="password_confirmation"
+        <input id="signup-password_confirmation" type="password" placeholder="password_confirmation" name="password_confirmation"
         onChange={event => this.updatePasswordconfirmation(event)} value={this.state.password_confirmation}/>
         
         <input type="submit" value="Sign up"/>

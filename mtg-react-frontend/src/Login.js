@@ -44,7 +44,7 @@ export default class Login extends Component {
         onChange={event => this.updateEmail(event)} value={this.state.email} />
 
         <label htmlFor="login-password">Password</label>
-        <input id="login-password" type="text" placeholder="password" name="password" 
+        <input id="login-password" type="password" placeholder="password" name="password" 
         onChange={event => this.updatePassword(event)} value={this.state.password} />
 
         <input type="submit" value="Login" />
