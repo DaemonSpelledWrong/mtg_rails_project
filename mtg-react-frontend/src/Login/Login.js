@@ -9,6 +9,7 @@ export default class Login extends Component {
     password:''
     }
   }
+
   logUserIn = (event) => {
     event.preventDefault();
     fetch('http://localhost:3000/authenticate', {
@@ -25,17 +26,22 @@ export default class Login extends Component {
     .then(response => response.json())
     .then(token => {
       localStorage.setItem('authToken', token.auth_token)
+      this.props.loginUser()
     })
   }
+
   updateEmail = (event) => {
     this.setState({
       email: event.target.value
-    })  }
+    })  
+  }
+
   updatePassword = (event) => {
     this.setState({
       password: event.target.value
     })
   }
+
   render() {
     return(
       <form id='form-submissions' onSubmit={event => this.logUserIn(event)}>

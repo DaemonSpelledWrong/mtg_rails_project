@@ -1,16 +1,18 @@
 import React, {Component} from 'react';
 import Login from './Login/Login';
-// import Register from './Register/Register';
+import Register from './Register/Register';
 import AllCards from './AllCards/AllCards'
 import Navigation from './Navigation/Navigation'
 import Footer from './Footer/Footer'
+import Greeting from './Greeting/Greeting'
 
  export default class App extends Component {
 
   state = {
     magic_cards: [],
     isLoggedIn: false,
-    sampleCards: []
+    sampleCards: [],
+    currentPage: 'greeting'
   }
 
   componentDidMount() {
@@ -39,13 +41,70 @@ import Footer from './Footer/Footer'
     })
   }
 
+  loginUser = () => {
+    this.setState({
+      isLoggedIn: true
+    })
+  }
+
+  logoutUser = (event) => {
+    event.preventDefault()
+    this.setState({
+      isLoggedIn: false
+    })
+    localStorage.removeItem('authToken')
+  }
+
+  loadHomePage = (event) => {
+    event.preventDefault()
+    this.setState({
+      currentPage: 'greeting'
+    })
+    return <Greeting />
+  }
+
+  loadLoginPage = (event) => {
+    event.preventDefault()
+    this.setState({
+      currentPage: 'login'
+    })
+    return <Login isLoggedIn={this.state.isLoggedIn} loginUser={this.loginUser}/>
+  }
+
+  loadSignUpPage = (event) => {
+    event.preventDefault()
+    this.setState({
+      currentPage: 'register'
+    })
+    return <Register />
+  }
+
+  changePage = (page) => {
+    this.setState({
+      currentPage: page
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <Navigation />
+        <Navigation 
+          isLoggedIn={this.state.isLoggedIn} 
+          logoutUser={this.logoutUser}
+          loadLoginPage={this.loadLoginPage}
+          loadHomePage={this.loadHomePage}
+          loadSignUpPage={this.loadSignUpPage}
+          changePage={this.changePage}
+        />
         <main>
           <div className="user-zone">
-            <Login />
+            {
+              this.state.currentPage !== 'greeting'
+              ? this.state.currentPage !== 'register'
+                ? <Login />
+                : <Register />
+              : <Greeting />
+            }
           </div>
           <section id="line-break"></section>
           

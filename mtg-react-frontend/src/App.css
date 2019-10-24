@@ -29,7 +29,7 @@ main {
 #form-submissions {
   display: flex;
   flex-direction: column;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 #form-submissions label {
@@ -65,4 +65,9 @@ main {
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  height: 34vh;
+}
+
+.welcome-message {
+  
 }
