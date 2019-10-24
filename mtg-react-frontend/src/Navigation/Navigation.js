@@ -10,14 +10,23 @@ export default class Navigation extends Component {
           <h1>Magic Deckbuilder Deluxe</h1>
         </section>
         <section className="main-site-navigation">
-          <ul className="navbar">
-            <li><a href="/">Home</a></li>
-            <li><a href="/">Cards</a></li>
-            <li><a href="/">Build Deck</a></li>
-            <li><a href="/">Sign Up</a></li>
-            <li><a href="/">Login</a></li>
-            <li><a href="/">Logout</a></li>
-          </ul>
+          {this.props.isLoggedIn === true
+            ? 
+            <ul className="navbar">
+              <li><a href="/" onClick={this.props.loadHomePage}>Home</a></li>
+              <li><a href="/">Cards</a></li>
+              <li><a href="/">Build Deck</a></li>
+              <li><a href="/" onClick={this.props.logoutUser}>Logout</a></li>
+            </ul>
+            :
+            <ul className="navbar">
+              <li><a href="/" onClick={this.props.loadHomePage}>Home</a></li>
+              <li><a href="/">Cards</a></li>
+              <li><a href="/">Build Deck</a></li>
+              <li><a href="/" onClick={this.props.loadSignUpPage}>Sign Up</a></li>
+              <li><a href="/" onClick={this.props.loadLoginPage}>Login</a></li>
+            </ul>
+          }
         </section>
       </header>
     )

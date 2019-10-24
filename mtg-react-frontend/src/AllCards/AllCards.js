@@ -3,9 +3,6 @@ import RenderCard from '../CardCreation/RenderCard/RenderCard'
 import './AllCards.css'
 
 export default class AllCards extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   render() {
     const renderCard = this.props.sampleCards.map(card => {
