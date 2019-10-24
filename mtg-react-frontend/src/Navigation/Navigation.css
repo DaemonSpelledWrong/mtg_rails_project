@@ -61,6 +61,7 @@ header {
   border-style: double;
   border-width: 5px;
   border-color: grey;
+  contain: content;
 }
 
 .title img {

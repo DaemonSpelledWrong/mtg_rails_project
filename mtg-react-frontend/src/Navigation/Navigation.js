@@ -12,6 +12,8 @@ export default class Navigation extends Component {
         <section className="main-site-navigation">
           <ul className="navbar">
             <li><a href="/">Home</a></li>
+            <li><a href="/">Cards</a></li>
+            <li><a href="/">Build Deck</a></li>
             <li><a href="/">Sign Up</a></li>
             <li><a href="/">Login</a></li>
             <li><a href="/">Logout</a></li>

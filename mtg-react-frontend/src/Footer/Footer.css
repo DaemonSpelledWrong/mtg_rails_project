@@ -2,11 +2,10 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
   bottom: 0;
   width: 99.35%;
   background-color: #303437;
-  height: 3rem;
+  height: 50px;
   border-style: double;
   border-width: 5px;
   border-color: grey;
