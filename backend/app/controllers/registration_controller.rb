@@ -5,7 +5,7 @@ class RegistrationController < ApplicationController
     encrypted_password = ''
 
     if params[:password] != params[:password_confirmation]
-      render 'invalid credentials'
+      render json: 'invalid credentials'
     else
       encrypted_password = BCrypt::Password.create(params[:password])
     end
