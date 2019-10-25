@@ -4,7 +4,7 @@ page_num = 1
 
 StandardCard.destroy_all
 
-while page_num <= 8
+while page_num <= 10
   standard_card_url = "https://api.scryfall.com/cards/search?as=grid&order=name&page=#{page_num}&q=f%3Astandard&unique=cards"
   all_cards = JSON.parse(RestClient.get(standard_card_url).body)['data']
   all_cards.each do |card|

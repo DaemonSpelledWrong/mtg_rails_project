@@ -33,7 +33,7 @@ import Greeting from './Greeting/Greeting'
 
   sampleCardDeck = () => {
     let sample = []
-    for(let i = 0; i < 20; i++) {
+    for(let i = 0; i < this.state.magic_cards.length; i++) {
       sample.push(this.state.magic_cards[i])
     }
 
@@ -90,6 +90,7 @@ import Greeting from './Greeting/Greeting'
     this.setState({
       currentPage: 'cards'
     })
+    return <Cards loadCardPage={this.loadCardPage} magic_cards={this.state.magic_cards} sampleCards={this.state.sampleCards} currentCardDisplay={this.currentCardDisplay} />
   }
 
   changePage = (page) => {
