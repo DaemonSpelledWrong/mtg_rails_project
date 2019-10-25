@@ -4,7 +4,7 @@ import AllCards from '../AllCards/AllCards'
 export default class Cards extends Component {
 render() {
   return(
-    <div>
+    <div className="cardRenderZone">
       <section id="line-break"></section>
       <ul className="currentCard"></ul> 
       <div className="card-zone">

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Login from './Login/Login';
 import Register from './Register/Register';
 import AllCards from './AllCards/AllCards'
+import Cards from './Cards/Cards'
 import Navigation from './Navigation/Navigation'
 import Footer from './Footer/Footer'
 import Greeting from './Greeting/Greeting'
@@ -123,17 +124,17 @@ import Greeting from './Greeting/Greeting'
               this.state.currentPage !== 'greeting'
               ? this.state.currentPage !== 'register'
                 ? <Login loginUser={this.loginUser}/>
-                : <Register />
+                : <Register loginUser={this.loginUser}/>
               : <Greeting />
             }
           </div>
-          <section id="line-break"></section>
-          <ul className="currentCard"></ul> 
-          <div className="card-zone">
-            {this.state && this.state.magic_cards &&
-              <AllCards magic_cards={this.state.magic_cards} sampleCards={this.state.sampleCards} currentCardDisplay={this.currentCardDisplay}/>
-            }
-          </div>
+         <section id="line-break"></section>
+         <ul className="currentCard"></ul> 
+         <div className="card-zone">
+           {this.state && this.state.magic_cards &&
+             <AllCards magic_cards={this.state.magic_cards} sampleCards={this.state.sampleCards} currentCardDisplay={this.currentCardDisplay}/>
+           }
+         </div>
         </main>
         <Footer />
       </div>

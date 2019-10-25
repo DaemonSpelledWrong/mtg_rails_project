@@ -23,9 +23,6 @@ export default class Register extends Component {
         password_confirmation: this.state.password_confirmation
       })
     })
-    .then(response => response.json())
-    .then(console.log)
-    .catch(console.log)
   }
   updateEmail = (event) => {
     this.setState({

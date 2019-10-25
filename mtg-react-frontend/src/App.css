@@ -82,3 +82,13 @@ main {
   border-width: 5px;
   padding: 10px;
 }
+
+.cardRenderZone {
+  width: 99.35%;
+}
+
+.CardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
