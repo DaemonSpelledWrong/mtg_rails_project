@@ -3,7 +3,7 @@
 .App {
   min-height: 100vh;
 	background-color: #D9CED6;
-	font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 main {
@@ -73,6 +73,9 @@ main {
 }
 
 .currentCard {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   margin-top: 1rem;
   color: #C4AB63;
   font-size: 25px;
@@ -84,7 +87,13 @@ main {
 }
 
 .cardRenderZone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 99.35%;
+  height: 80vh;
+  contain: content;
+  overflow: scroll;
 }
 
 .CardContainer {
