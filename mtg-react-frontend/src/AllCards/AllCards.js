@@ -6,12 +6,12 @@ export default class AllCards extends Component {
 
   render() {
     const renderCard = this.props.sampleCards.map(card => {
-        return (
-          <RenderCard 
-          key={Date.now() + card.id}
-          currentCardDisplay={this.props.currentCardDisplay}
-          {...card}/>
-        )
+      return (
+        <RenderCard 
+        key={Date.now() + card.id}
+        currentCardDisplay={this.props.currentCardDisplay}
+        {...card}/>
+      )
     })
 
     return(

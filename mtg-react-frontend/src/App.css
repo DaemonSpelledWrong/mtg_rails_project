@@ -91,4 +91,7 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+  contain: content;
 }

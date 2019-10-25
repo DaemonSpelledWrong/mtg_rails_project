@@ -21,7 +21,7 @@ export default class Navigation extends Component {
             :
             <ul className="navbar">
               <li><a href="/" onClick={this.props.loadHomePage}>Home</a></li>
-              <li><a href="/">Cards</a></li>
+              <li><a href="/" onClick={this.props.loadCardPage}>Cards</a></li>
               <li><a href="/">Build Deck</a></li>
               <li><a href="/" onClick={this.props.loadSignUpPage}>Sign Up</a></li>
               <li><a href="/" onClick={this.props.loadLoginPage}>Login</a></li>
