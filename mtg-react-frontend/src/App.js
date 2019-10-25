@@ -85,13 +85,12 @@ import Greeting from './Greeting/Greeting'
     return <Register loadLoginPage={this.loadLoginPage}/>
   }
 
-  // loadCardPage = (event) => {
-  //   event.preventDefault()
-  //   this.setState({
-  //     currentPage: 'cards'
-  //   })
-  //   return <Cards />
-  // }
+  loadCardPage = (event) => {
+    event.preventDefault()
+    this.setState({
+      currentPage: 'cards'
+    })
+  }
 
   changePage = (page) => {
     this.setState({
@@ -116,25 +115,23 @@ import Greeting from './Greeting/Greeting'
           loadLoginPage={this.loadLoginPage}
           loadHomePage={this.loadHomePage}
           loadSignUpPage={this.loadSignUpPage}
+          loadCardPage={this.loadCardPage}
           changePage={this.changePage}
         />
         <main>
           <div className="user-zone">
             {
-              this.state.currentPage !== 'greeting'
-              ? this.state.currentPage !== 'register'
-                ? <Login loginUser={this.loginUser} loadHomePage={this.loadHomePage}/>
-                : <Register loginUser={this.loginUser} loadLoginPage={this.loadLoginPage}/>
-              : <Greeting />
+              this.state.currentPage === 'greeting'
+              ? <Greeting />
+              : this.state.currentPage === 'register'
+                ? <Register loginUser={this.loginUser} loadLoginPage={this.loadLoginPage}/>
+                : this.state.currentPage === 'cards'
+                  ? <Cards loadCardPage={this.loadCardPage} magic_cards={this.state.magic_cards} sampleCards={this.state.sampleCards} currentCardDisplay={this.currentCardDisplay} />
+                  : this.state.currentPage === 'login'
+                    ? <Login loginUser={this.loginUser} loadHomePage={this.loadHomePage}/>
+                    : <Greeting />
             }
           </div>
-         <section id="line-break"></section>
-         <ul className="currentCard"></ul> 
-         <div className="card-zone">
-           {this.state && this.state.magic_cards &&
-             <AllCards magic_cards={this.state.magic_cards} sampleCards={this.state.sampleCards} currentCardDisplay={this.currentCardDisplay}/>
-           }
-         </div>
         </main>
         <Footer />
       </div>
