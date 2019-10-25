@@ -2,6 +2,8 @@
 A deck building application for the card game Magic the Gathering.
 All card data has been seeded from the <a href="https://scryfall.com/docs/api">Scryfall</a> api. - `https://scryfall.com/docs/api`
 
+<a href = "https://youtu.be/yaA-Sau9FMk">See features video!</a>
+
 ## Requirements
 ---
 - Ruby
