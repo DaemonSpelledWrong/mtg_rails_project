@@ -42,9 +42,14 @@ import Greeting from './Greeting/Greeting'
   }
 
   loginUser = () => {
-    this.setState({
-      isLoggedIn: true
-    })
+    console.log(localStorage.getItem('authToken') === 'undefined')
+    return (
+      localStorage.getItem('authToken') === 'null'
+      ? null
+      : localStorage.getItem('authToken') === 'undefined'
+        ? null
+        : this.setState({ isLoggedIn: true })
+    )
   }
 
   logoutUser = (event) => {
@@ -79,10 +84,26 @@ import Greeting from './Greeting/Greeting'
     return <Register />
   }
 
+  // loadCardPage = (event) => {
+  //   event.preventDefault()
+  //   this.setState({
+  //     currentPage: 'cards'
+  //   })
+  //   return <Cards />
+  // }
+
   changePage = (page) => {
     this.setState({
       currentPage: page
     })
+  }
+
+  currentCardDisplay = () => {
+    return(
+      <div>
+        <ul className="currentCard"></ul> 
+      </div>
+    )
   }
 
   render() {
@@ -101,16 +122,16 @@ import Greeting from './Greeting/Greeting'
             {
               this.state.currentPage !== 'greeting'
               ? this.state.currentPage !== 'register'
-                ? <Login />
+                ? <Login loginUser={this.loginUser}/>
                 : <Register />
               : <Greeting />
             }
           </div>
           <section id="line-break"></section>
-          
+          <ul className="currentCard"></ul> 
           <div className="card-zone">
             {this.state && this.state.magic_cards &&
-              <AllCards magic_cards={this.state.magic_cards} sampleCards={this.state.sampleCards}/>
+              <AllCards magic_cards={this.state.magic_cards} sampleCards={this.state.sampleCards} currentCardDisplay={this.currentCardDisplay}/>
             }
           </div>
         </main>
