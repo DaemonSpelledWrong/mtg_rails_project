@@ -74,7 +74,7 @@ import Greeting from './Greeting/Greeting'
     this.setState({
       currentPage: 'login'
     })
-    return <Login isLoggedIn={this.state.isLoggedIn} loginUser={this.loginUser}/>
+    return <Login isLoggedIn={this.state.isLoggedIn} loginUser={this.loginUser} loadHomePage={this.loadHomePage}/>
   }
 
   loadSignUpPage = (event) => {
@@ -82,7 +82,7 @@ import Greeting from './Greeting/Greeting'
     this.setState({
       currentPage: 'register'
     })
-    return <Register />
+    return <Register loadLoginPage={this.loadLoginPage}/>
   }
 
   // loadCardPage = (event) => {
@@ -123,8 +123,8 @@ import Greeting from './Greeting/Greeting'
             {
               this.state.currentPage !== 'greeting'
               ? this.state.currentPage !== 'register'
-                ? <Login loginUser={this.loginUser}/>
-                : <Register loginUser={this.loginUser}/>
+                ? <Login loginUser={this.loginUser} loadHomePage={this.loadHomePage}/>
+                : <Register loginUser={this.loginUser} loadLoginPage={this.loadLoginPage}/>
               : <Greeting />
             }
           </div>

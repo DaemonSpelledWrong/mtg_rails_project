@@ -28,6 +28,16 @@ export default class Login extends Component {
       localStorage.setItem('authToken', token.auth_token)
       this.props.loginUser()
     })
+    .then(
+      this.setState({
+        email: '',
+        password: '',
+        password_confirmation: ''
+      })
+    )
+    .then(
+      this.props.loadHomePage(event)
+    )
   }
 
   updateEmail = (event) => {
