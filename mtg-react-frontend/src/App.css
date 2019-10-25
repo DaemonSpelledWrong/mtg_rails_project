@@ -12,7 +12,7 @@ main {
   justify-content: center;
   align-items: center;
   contain: content;
-  min-height: calc(84vh - 70px);
+  min-height: calc(100vh - 70px);
 }
 
 #line-break {
