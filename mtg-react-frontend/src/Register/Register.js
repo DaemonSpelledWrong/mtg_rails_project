@@ -23,6 +23,16 @@ export default class Register extends Component {
         password_confirmation: this.state.password_confirmation
       })
     })
+    .then(
+      this.setState({
+        email: '',
+        password: '',
+        password_confirmation: ''
+      })
+    )
+    .then(
+      this.props.loadLoginPage(event)
+    )
   }
   updateEmail = (event) => {
     this.setState({
