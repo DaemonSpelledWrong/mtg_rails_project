@@ -69,5 +69,16 @@ main {
 }
 
 .welcome-message {
-  
+  font-size: 40px;
+}
+
+.currentCard {
+  margin-top: 1rem;
+  color: #C4AB63;
+  font-size: 25px;
+  background-color: #303437;
+  border-color: grey;
+  border-style: double;
+  border-width: 5px;
+  padding: 10px;
 }

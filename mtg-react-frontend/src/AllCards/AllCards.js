@@ -9,6 +9,7 @@ export default class AllCards extends Component {
         return (
           <RenderCard 
           key={Date.now() + card.id}
+          currentCardDisplay={this.props.currentCardDisplay}
           {...card}/>
         )
     })
