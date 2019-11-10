@@ -13,6 +13,13 @@ class DecksController < ApplicationController
       user_id: params[:user_id]
     )
 
+    params[:cards].map do |card|
+      Deckcard.create(
+        deck_id: @deck.id,
+        standard_card_id: card[:id]
+      )
+    end
+
     render status: 200
   end
 
