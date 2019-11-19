@@ -5,7 +5,7 @@ export default class Footer extends Component {
   render() {
     return(
       <footer>
-        <a href="https://www.linkedin.com/in/damon-self-0a4043137/">
+        <a href="https://www.linkedin.com/in/damonself">
           © Damon Self
         </a>
         <section className="logos">

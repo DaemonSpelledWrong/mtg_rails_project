@@ -5,7 +5,10 @@ class AuthenticationController < ApplicationController
     command = AuthenticateUser.call(params[:email], params[:password])
 
     if command.success?
-      render json: { auth_token: command.result[:token], user: command.result[:user] }
+      user_data = User.find(command.result[:user][:id])
+      user = UserSerializer.new(user_data)
+
+      render json: { auth_token: command.result[:token], user: user, decks: DeckSerializer.new(user_data.decks)  }
     else
       render json: { error: command.errors }, status: :unauthorized
     end

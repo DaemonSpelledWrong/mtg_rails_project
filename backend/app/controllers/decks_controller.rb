@@ -4,7 +4,7 @@ class DecksController < ApplicationController
   def index
     @decks = Deck.all
 
-    render json: @decks, include: :user
+    render json: @decks, include: :standard_cards
   end
 
   def create
@@ -12,7 +12,6 @@ class DecksController < ApplicationController
       name: params[:name],
       user_id: params[:user_id]
     )
-
     params[:cards].map do |card|
       Deckcard.create(
         deck_id: @deck.id,
@@ -29,6 +28,12 @@ class DecksController < ApplicationController
     @deck.update(
       name: params[:name]
     )
+
+    @deck.deckcards.destroy_all
+
+    params[:cards].map do |card|
+      Deckcard.create(deck_id: @deck[:id], standard_card_id: card[:id])
+    end
 
     render status: 200
   end
